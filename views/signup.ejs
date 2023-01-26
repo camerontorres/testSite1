@@ -1,0 +1,190 @@
+
+<!--
+	Locus by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+		<title>Untitled</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="signupAssets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<section id="header">
+						<header>
+							<h1><a href=""><img src=""></a></h1>
+							<p></p>
+						</header>
+						<!-- <nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li><li><a href="generic.html">Generic</a></li><li><a href="elements.html">Elements</a></li>
+							</ul>
+						</nav> -->
+					</section>
+
+				<!-- Banner -->
+					<section id="banner">
+						<h2>A place for<br />
+						coffee reviews<br />
+						from coffee drinkers.</h2>
+						<ul class="actions special">
+							<li><a href="#" class="button large">Full Story</a></li>
+						</ul>
+					</section>
+
+				<!-- One -->
+					<!-- <section class="main style1">
+						<section>
+							<h3>Username</h3>
+							<p>Cubilia in ornare mi. Accumsan massa vis vis commodo adipiscing. Adipiscing amet odio id consectetur penatibus. Accumsan adipiscing. Lorem. Sapien blandit magna neque sed.</p>
+							<ul class="actions special">
+								<li><a href="#" class="button">More</a></li>
+							</ul>
+						</section>
+						<section>
+							<h3>Curae Amet</h3>
+							<p>Cubilia in ornare mi. Accumsan massa vis vis commodo adipiscing. Adipiscing amet odio id consectetur penatibus. Accumsan adipiscing. Lorem. Sapien blandit magna neque sed.</p>
+							<ul class="actions special">
+								<li><a href="#" class="button">More</a></li>
+							</ul>
+						</section>
+					</section> -->
+
+				<!-- Two -->
+					<!-- <section class="main style2">
+						<header class="major">
+							<h2>Aliquam nisl<br />
+							sed tempus dolor</h2>
+							<p>Magna feugiat lorem ipsum dolor<br />
+							sit amet tempus sed adipiscing</p>
+						</header>
+						<section class="left">
+							<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+							<div class="content">
+								<h3>Ipsum odio</h3>
+								<p>Cubilia in ornare mi. Accumsan massa vis amet tempus commodo adipiscing. Adipiscing amet odio id lorem consectetur penatibus lorem.</p>
+							</div>
+						</section>
+						<section class="right">
+							<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+							<div class="content">
+								<h3>Vis ornare</h3>
+								<p>Cubilia in ornare mi. Accumsan massa vis amet tempus commodo adipiscing. Adipiscing amet odio id lorem consectetur penatibus lorem.</p>
+							</div>
+						</section>
+						<section class="left">
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+							<div class="content">
+								<h3>Nisl accumsan</h3>
+								<p>Cubilia in ornare mi. Accumsan massa vis amet tempus commodo adipiscing. Adipiscing amet odio id lorem consectetur penatibus lorem.</p>
+							</div>
+						</section>
+						<footer class="major">
+							<p>Magna feugiat lorem ipsum dolor<br />
+							sit amet tempus sed adipiscing</p>
+							<ul class="actions special">
+								<li><a href="#" class="button large">Learn More</a></li>
+							</ul>
+						</footer>
+					</section> -->
+
+				<!-- Footer -->
+					<section id="footer">
+						<h2>Sign Up</h2>
+						<form action="#" method="post">
+							<div class="row gtr-uniform gtr-50">
+								<div class="col-6 col-12-xsmall">
+									<% if (locals.messages.errors) { %>
+										<% messages.errors.forEach( el => { %>
+											<div class="alert alert-danger"><%= el.msg %></div>
+										<% }) %>    
+									<% } %>
+									<% if (locals.messages.info) { %>
+										<% messages.info.forEach( el => { %>
+											<div class="alert alert-info"><%= el.msg %></div>
+										<% }) %>    
+									<% } %>
+									
+									<input action="/signup" method="POST" type="text" name="name" id="name" placeholder="Name" />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input type="email" name="email" id="email" placeholder="Email" />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input type="password" name="password" id="password" placeholder="Password" />
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirmPassword" />
+								</div>
+								<div class="col-12">
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</div>
+							</div>
+						</form>
+						<!-- <ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						</ul> -->
+					</section>
+					<!-- <section class="main style2">
+						<header class="major">
+							<h2>Aliquam nisl<br />
+							sed tempus dolor</h2>
+							<p>Magna feugiat lorem ipsum dolor<br />
+							sit amet tempus sed adipiscing</p>
+						</header>
+						<section class="left">
+							<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+							<div class="content">
+								<h3>Ipsum odio</h3>
+								<p>Cubilia in ornare mi. Accumsan massa vis amet tempus commodo adipiscing. Adipiscing amet odio id lorem consectetur penatibus lorem.</p>
+							</div>
+						</section>
+						<section class="right">
+							<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+							<div class="content">
+								<h3>Vis ornare</h3>
+								<p>Cubilia in ornare mi. Accumsan massa vis amet tempus commodo adipiscing. Adipiscing amet odio id lorem consectetur penatibus lorem.</p>
+							</div>
+						</section>
+						<section class="left">
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+							<div class="content">
+								<h3>Nisl accumsan</h3>
+								<p>Cubilia in ornare mi. Accumsan massa vis amet tempus commodo adipiscing. Adipiscing amet odio id lorem consectetur penatibus lorem.</p>
+							</div>
+						</section>
+						<footer class="major">
+							<p>Magna feugiat lorem ipsum dolor<br />
+							sit amet tempus sed adipiscing</p>
+							<ul class="actions special">
+								<li><a href="#" class="button large">Learn More</a></li>
+							</ul>
+						</footer>
+					</section> -->
+			</div>
+
+		<!-- Copyright -->
+			<div id="copyright">
+				&copy; Alex Weimer. All rights reserved.
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
