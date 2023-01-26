@@ -1,10 +1,14 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const commentsController = require('../controllers/comments');
-const { ensureAuth, ensureGuest } = require('../middleware/auth');
+const upload = require("../middleware/multer");
 
-//Post Routes - simplified for now
+const commentsController = require("../controllers/comments");
+const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
-router.post('/createComment/:id', commentsController.createComment);
+//Comments Routes - simplified for now
+
+
+router.post("/createComment/:id", commentsController.createComment);
+
 
 module.exports = router;
