@@ -1,7 +1,7 @@
 {
-  "name": "study",
+  "name": "UNION THREADS",
   "version": "1.0.0",
-  "description": "Study With Friends!",
+  "description": "union-made goods",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
