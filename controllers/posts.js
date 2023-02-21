@@ -1,12 +1,23 @@
-const cloudinary = require("../middleware/cloudinary");
-const Post = require("../models/Post");
-const Comment = require("../models/Comment");
+
+
+//const cloudinary = require("../middleware/cloudinary");
+const Merch = require("../models/merch");
+/*const Comment = require("../models/Comment"); */
 
 
 module.exports = {
-  getProfile: async (req, res) => {
+ /* getProfile: async (req, res) => {
     try {
       const posts = await Post.find({ user: req.user.id });
+      res.render("profile.ejs", { posts: posts, user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  }, */
+
+  getMerchPic: async (req, res) => {
+    try {
+      const merch = await Merch.find({ user: mongoose.Schema.Types.ObjectId});
       res.render("profile.ejs", { posts: posts, user: req.user });
     } catch (err) {
       console.log(err);
@@ -14,32 +25,33 @@ module.exports = {
   },
   getFeed: async (req, res) => {
     try {
-      const posts = await Post.find().sort({ createdAt: "desc" }).lean();
+      const posts = await Merch.find().sort({ createdAt: "desc" }).lean();
       
       res.render("feed.ejs", { posts: posts});
     } catch (err) {
       console.log(err);
     }
-  },
+  },/*
   getPost: async (req, res) => {
     try {
-      const post = await Post.findById(req.params.id);                /**finds the post */
+      const post = await Merch.findById(req.params.id);                /**finds the post */
                         /*** Comment.find is pulling from the comment model */
-      const comments = await Comment.find({post: req.params.id}).sort({ createdAt: "desc" }).populate('user').lean();/**finds the comemnts for the post and sorts decending by date */
-      const createdBy = req.user.userName
+   //   const comments = await Comment.find({post: req.params.id}).sort({ createdAt: "desc" }).populate('user').lean();/**finds the comemnts for the post and sorts decending by date */
+    //  const createdBy = req.user.userName
       
-      res.render("post.ejs", { post: post, user: req.user, comments: comments, createdBy: createdBy}); /**renders in the EJS */
+    //  res.render("post.ejs", { post: post, user: req.user, comments: comments, createdBy: createdBy}); /**renders in the EJS */
       
-    } catch (err) {
-      console.log(err);
-    }
-  },
+   // } catch (err) {
+    //  console.log(err);
+   // }
+  //},
+  /*
   createPost: async (req, res) => {
     try {
       // Upload image to cloudinary
       const result = await cloudinary.uploader.upload(req.file.path, {folder:"samples"});
 
-      await Post.create({
+      await Merch.create({
         title: req.body.title,
         image: result.secure_url,
         cloudinaryId: result.public_id,
@@ -80,5 +92,5 @@ module.exports = {
     } catch (err) {
       res.redirect("/profile");
     }
-  },
+  },*/
 };

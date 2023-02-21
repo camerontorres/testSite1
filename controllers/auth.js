@@ -1,4 +1,4 @@
-const passport = require("passport");
+/* const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
 
@@ -115,4 +115,4 @@ exports.postSignup = (req, res, next) => {
       });
     }
   );
-};
+}; */

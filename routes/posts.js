@@ -1,4 +1,4 @@
-const express = require("express");
+/*const express = require("express");
 const router = express.Router();
 const upload = require("../middleware/multer");
 const postsController = require("../controllers/posts");
@@ -14,3 +14,5 @@ router.put("/likePost/:id", postsController.likePost);
 router.delete("/deletePost/:id", postsController.deletePost);
 
 module.exports = router;
+
+*/
