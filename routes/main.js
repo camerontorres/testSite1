@@ -5,12 +5,15 @@ const homeController = require("../controllers/home");
 //const postsController = require("../controllers/posts");
 const infoController = require("../controllers/info");
 const productsController = require("../controllers/products");
+const locationsController = require("../controllers/locations");
 //const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Main Routes - simplified for now
 router.get("/", homeController.getIndex);
 router.get("/info", infoController.getInfo);
 router.get("/products", productsController.getProducts);
+router.get("/newyork", locationsController.getNewyork);
+router.get("/seoul", locationsController.getSeoul);
 
 //router.get("/profile", ensureAuth, postsController.getProfile);
 //router.get("/feed", postsController.getFeed);

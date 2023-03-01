@@ -9,6 +9,7 @@ const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
+const productRoutes = require("./routes/products");
 //const postRoutes = require("./routes/posts");
 //const commentRoutes = require("./routes/comments");
 //const profPicRoutes = require("./routes/profPic");
@@ -57,6 +58,8 @@ app.use(flash());
 
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
+app.use("/products/", productRoutes);
+
 //app.use("/post", postRoutes);
 //app.use("/comment", commentRoutes);
 //app.use("/profPic.js", profPicRoutes);
