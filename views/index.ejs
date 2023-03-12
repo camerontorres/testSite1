@@ -20,40 +20,40 @@
 	
 	<div class="row"> <!---big carousel-->
 		<div class="col-md-12 p-0">
-			<div class="carousel slide" id="carousel-592952">
+			<div class="carousel slide " id="carousel-592952" data-bs-ride="carousel">
 				<ol class="carousel-indicators">
-					<li data-slide-to="0" data-target="#carousel-592952">
+					<li data-bs-slide-to="0" data-bs-target="#carousel-592952" class="active">
 					</li>
-					<li data-slide-to="1" data-target="#carousel-592952">
+					<li data-bs-slide-to="1" data-bs-target="#carousel-592952">
 					</li>
-					<li data-slide-to="2" data-target="#carousel-592952" class="active">
+					<li data-bs-slide-to="2" data-bs-target="#carousel-592952" >
 					</li>
 				</ol>
 				<div class="carousel-inner" style="height: 600px !important;">
-					<div class="carousel-item" style="height: 550px !important;">
-						<img class="d-block" style="height: 550px !important; width: 100vh;" alt="Carousel Bootstrap First" src="https://www.layoutit.com/img/sports-q-c-1600-500-1.jpg" />
-						<div class="carousel-caption">
-							<h4>
-								First Thumbnail label
-							</h4>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-						</div>
-					</div>
-					<div class="carousel-item" style="height: 550px !important;">
-						<img class="d-block w-100" style="height: 550px !important;" alt="Carousel Bootstrap Second" src="https://www.layoutit.com/img/sports-q-c-1600-500-2.jpg" />
-						<div class="carousel-caption">
-							<h4>
-								Second Thumbnail label
-							</h4>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-						</div>
-					</div>
 					<div class="carousel-item active" style="height: 550px !important;">
-						<img id="c3" class="d-block w-100" style="height: 1400px !important; object-position: 0px -650px;" alt="Carousel Bootstrap Third" src="/imgs/c3.jpg" />
+						<img class="d-block" id="c1" style="height: auto; object-position: 0px -100px; width: 100vw;"  alt="Carousel Bootstrap First" src="/imgs/c1.jpg" />
+						<div class="carousel-caption text-dark">
+							<h4>
+								Spring/Summer 23
+							</h4>
+							<p>
+								Browse the latest collections. Inspired by modern life, for modern life.
+							</p>
+						</div>
+					</div>
+					<div class="carousel-item" style="height: 550px !important;">
+						<img class="d-block" id="c2" style="height: 1400px !important; object-position: 0px -650px; width: 100vw;"  alt="Carousel Bootstrap Second" src="/imgs/c2.jpg" />
+						<div class="carousel-caption text-dark" style="text-align: left;">
+							<h4>
+								No fast fashion here
+							</h4>
+							<p >
+								Every stich and fold was made to last. With high quality materials and master expertice, our clothes will last a lifetime.
+							</p>
+						</div>
+					</div>
+					<div class="carousel-item " style="height: 550px !important;">
+						<img id="c3" class="d-block" style="height: 1400px !important; object-position: 0px -650px; width: 100vw;" alt="Carousel Bootstrap Third" src="/imgs/c3.jpg" />
 						<div class="carousel-caption">
 							<h4>
 								New Spring Jackets for Spring 23
@@ -64,7 +64,26 @@
 							</p>
 						</div>
 					</div>
-				</div> <a class="carousel-control-prev" href="#carousel-592952" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-592952" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
+				</div> 
+				<!--<a class="carousel-control-prev" href="#carousel-592952" data-slide="prev"  onclick="$('#myCarousel').carousel('prev')">
+					<span class="carousel-control-prev-icon"></span> 
+					<span class="sr-only">Previous</span>
+				</a> 
+				<a class="carousel-control-next" href="#carousel-592952" data-slide="next"  onclick="$('#myCarousel').carousel('next')">
+					<span class="carousel-control-next-icon"></span> 
+					<span class="sr-only">Next</span>
+				</a> -->
+
+				<button class="carousel-control-prev" type="button" data-bs-target="#carousel-592952" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+					<span class="visually-hidden">Previous</span>
+				  </button>
+				  <button class="carousel-control-next" type="button" data-bs-target="#carousel-592952" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+					<span class="visually-hidden">Next</span>
+				  </button>
 			</div>
 		</div>
 	</div>
@@ -75,7 +94,7 @@
 
                     <a class="inFront section1" style="height: fit-content; width: fit-content;"href="/products">                    
                         <section class="section1 appear" style="height: 600px; width: 33vw;">
-                                <h1 class="text-center text-dark bg-light" style="" >MAN</h1>
+                                <h1 class="text-center text-dark bg-light"  >MAN</h1>
                         </section>
                     </a>
            
@@ -86,7 +105,7 @@
 
                     <a class="inFront section1" style="height: fit-content; width: fit-content;"href="">                    
                         <section class="section1 appear" style="height: 600px; width: 33vw;">
-                                <h1 class="text-center text-dark bg-light" style="" >WOMAN</h1>
+                                <h1 class="text-center text-dark bg-light" >WOMAN</h1>
                         </section>
                     </a>
            
@@ -97,7 +116,7 @@
 
                     <a class="inFront section1" style="height: fit-content; width: fit-content;"href="">                    
                         <section class="section1 appear" style="height: 600px; width: 33vw;">
-                                <h1 class="text-center text-dark bg-light" style="" >ACCESSORIES</h1>
+                                <h1 class="text-center text-dark bg-light" >ACCESSORIES</h1>
                         </section>
                     </a>
            
@@ -136,7 +155,7 @@
             <a href="">
                 <section class="section1 inFront appear bg-dark" style="height: 350px; width: 25vw;">
                             
-                    <h1 class="  text-center text-white" style="" >Heavyweight Tee</h1>
+                    <h1 class="  text-center text-white"  >Heavyweight Tee</h1>
             </section>           
              </a>
 		</div>
@@ -145,7 +164,7 @@
             <a href="">
                 <section class="section1 inFront appear bg-dark" style="height: 350px; width: 25vw;">
                             
-                    <h1 class="  text-center text-white" style="" >Unisex Tee</h1>
+                    <h1 class="  text-center text-white"  >Unisex Tee</h1>
             </section>           
              </a>
 		</div>
@@ -154,7 +173,7 @@
             <a href="">
                 <section class="section1 inFront appear bg-dark" style="height: 350px; width: 25vw;">
                             
-                    <h1 class="  text-center text-white" style="" >Cotton Shirt</h1>
+                    <h1 class="  text-center text-white"  >Cotton Shirt</h1>
             </section>           
              </a>
 		</div>
@@ -163,7 +182,7 @@
             <a href="">
                 <section class="section1 inFront appear bg-dark" style="height: 350px; width: 25vw;">
                             
-                    <h1 class="  text-center text-white" style="" >Summer Crop Top</h1>
+                    <h1 class="  text-center text-white"  >Summer Crop Top</h1>
             </section>           
              </a>
 		</div>
@@ -174,7 +193,7 @@
 				<div class="col-md-4" style="padding: 0px">
 					<div class="card">
 						<img class="card-img-top" alt="Bootstrap Thumbnail First" src="imgs/card1.jpg" style="height:320px"  />
-						<div class="card-block bg-dark text-light" style="height: 220px">
+						<div class="card-block bg-light text-dark" style="height: 220px">
 							<h5 class="card-title text-center pt-3">
 								Sign up for exclusive discounts
 							</h5>
@@ -190,7 +209,7 @@
 				<div class="col-md-4" style="padding: 0px">
 					<div class="card">
 						<img class="card-img-top" alt="Bootstrap Thumbnail Second" src="imgs/card2.jpg" style="height:320px"  />
-						<div class="card-block bg-secondary" style="height: 220px">
+						<div class="card-block bg-$gray-400" style="height: 220px">
 							<h5 class="card-title text-center pt-3">
 								Shop the sale
 							</h5>
@@ -206,7 +225,7 @@
 				<div class="col-md-4" style="padding: 0px">
 					<div class="card">
 						<img class="card-img-top" alt="Bootstrap Thumbnail Third" src="imgs/card3.jpg" style="height:320px" />
-						<div class="card-block bg-dark text-light" style="height: 220px">
+						<div class="card-block bg-light text-dark" style="height: 220px">
 							<h5 class="card-title text-center pt-3">
 								Browse the bestsellers
 							</h5>
@@ -229,7 +248,7 @@
             
             <h1 class="text-white inFront"> <!---placeholder text!!!! ---></h1>
         </div>
-		<div class="col-md-6 d-flex flex-column justify-content-center bg-dark">
+		<div class="col-md-6 d-flex flex-column justify-content-center bg-dark" style="background-image: url(/imgs/clouds.jpg); background-size: cover;">
 			<form role="form d-flex flex-column">
 				<div class="form-group d-flex flex-column text-center">
 					 

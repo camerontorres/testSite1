@@ -1,7 +1,7 @@
 
 
 //const cloudinary = require("../middleware/cloudinary");
-const Merch = require("../models/merch");
+const Merch = require("../models/product");
 /*const Comment = require("../models/Comment"); */
 
 
