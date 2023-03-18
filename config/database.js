@@ -1,5 +1,9 @@
 const mongoose = require("mongoose");
 
+
+
+
+
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.DB_STRING, {
@@ -7,6 +11,12 @@ const connectDB = async () => {
       useUnifiedTopology: true,
       useFindAndModify: false,
       useCreateIndex: true,
+    });
+    mongoose.connection.db.listCollections({name: 'products'})
+    .next(function(err, collinfo) {
+        if (collinfo) {
+            // The collection exists
+        }
     });
 
     console.log(`MongoDB Connected: ${conn.connection.host}`);
@@ -16,4 +26,4 @@ const connectDB = async () => {
   }
 };
 
-module.exports = connectDB;
+module.exports = connectDB 
