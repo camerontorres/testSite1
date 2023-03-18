@@ -4,17 +4,20 @@ const router = express.Router();
 const homeController = require("../controllers/home");
 //const postsController = require("../controllers/posts");
 const infoController = require("../controllers/info");
-const productsController = require("../controllers/products");
+//const productsController = require("../controllers/products");
 const locationsController = require("../controllers/locations");
+const productRoutes = require("../routes/products")
+
 //const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Main Routes - simplified for now
 router.get("/", homeController.getIndex);
 router.get("/info", infoController.getInfo);
-router.get("/products", productsController.getProducts);
+//router.get("/products", productsController.getProducts);
 router.get("/newyork", locationsController.getNewyork);
 router.get("/seoul", locationsController.getSeoul);
-router.get("/productPage", productsController.getProductPage);
+router.use("/products", productRoutes);
+//router.get("/productPage", productsController.getProductPage);
 
 //router.get("/profile", ensureAuth, postsController.getProfile);
 //router.get("/feed", postsController.getFeed);
