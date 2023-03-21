@@ -1,7 +1,7 @@
 {
   "name": "denim_supply",
   "version": "1.0.0",
-  "description": "union-made goods",
+  "description": "union made goods",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
