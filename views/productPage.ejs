@@ -1,0 +1,85 @@
+<%- include('partials/header') -%>
+
+
+<div class="container-fluid headerGap">
+    <div class="row bg-light p-0">
+        <div class="col-md-8 p-5">
+            <!-- insert image here-->
+            <div class="bg-light" style="background-image: url(../imgs/merch/blacktee.jpg); height: 100vh; background-size: cover; background-position: center;">
+                
+
+            </div>
+
+        </div>
+        
+
+        <div class="col-md-4 p-5 d-flex align-self-center" style="height: 100%">
+            <!--perhaps a form for the page here-->
+                <div class=" bg-light">
+                    <h1>BLACK TEE</h1>
+                    <span>20$</span>
+                    <div class="text-secondary"><!--text box-->
+                        <p>
+                            Lorem ipsum dolor sit, 
+                            amet consectetur adipisicing elit. 
+                            Esse atque distinctio 
+                            architecto repellat saepe rerum alias odit eius,
+                            voluptatem doloremque?
+                            Lorem ipsum dolor sit, 
+                            amet consectetur adipisicing elit. 
+                            Esse atque distinctio 
+                            architecto repellat saepe rerum alias odit eius,
+                            voluptatem doloremque?
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum.</li>
+                                <li>Lorem ipsum dolor sit</li>
+                                <li>Lorem ipsum dolor sit amet. yadda yadda.</li>
+                                
+                            </ul>
+                        </p>
+                       <span> <%= product.title %> </span>
+                    </div>
+                    <form>
+
+                    <div class="d-flex flex-row justify-content-center mt-5" id="radio-group"><!--radial buttons-->
+                        <div class="form-check radialOption">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                            <label class="form-check-label" for="exampleRadios1">
+                              S
+                            </label>
+                          </div>
+                          <div class="form-check radialOption" style="margin-left: 25px; margin-right: 25px;">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                              M
+                            </label>
+                          </div>
+                          <div class="form-check radialOption">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                            <label class="form-check-label" for="exampleRadios3">
+                              L
+                            </label>
+                          </div>
+
+                    </div>
+                    <div class="d-flex  justify-content-center">
+                        <button type="button" class="btn btn-dark mt-3" id="purchaseBtn" >add to cart</button>
+                      
+                     
+                        
+                       
+                        
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+                       
+
+
+<%- include('partials/footer') -%>
