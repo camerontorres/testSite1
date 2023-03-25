@@ -1,11 +1,12 @@
 <%- include('partials/header') -%>
 
 
-<div class="container-fluid headerGap">
-    <div class="row bg-light p-0">
+<div class="container-fluid headerGap p-0" style="width: 100vw;">
+    <div class="row bg-light p-0 m-0" style="width: 100vw">
         <div class="col-md-8 p-5">
             <!-- insert image here-->
-            <div class="bg-light" style="background-image: url(../imgs/merch/blacktee.jpg); height: 100vh; background-size: cover; background-position: center;">
+            <div class="bg-light" style=" height: 100vh">
+              <img src="<%= product.image %>" style="height: 800px; width: 1fr;" >
                 
 
             </div>
@@ -16,8 +17,8 @@
         <div class="col-md-4 p-5 d-flex align-self-center" style="height: 100%">
             <!--perhaps a form for the page here-->
                 <div class=" bg-light">
-                    <h1>BLACK TEE</h1>
-                    <span>20$</span>
+                    <h1> <%= product.title %>  </h1>
+                    <span> <%= product.price %></span>
                     <div class="text-secondary"><!--text box-->
                         <p>
                             Lorem ipsum dolor sit, 
@@ -38,7 +39,7 @@
                                 
                             </ul>
                         </p>
-                       <span> <%= product.title %> </span>
+                       
                     </div>
                     <form>
 

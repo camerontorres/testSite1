@@ -1,4 +1,4 @@
-/* const passport = require("passport");
+ const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
 
@@ -39,7 +39,7 @@ exports.postLogin = (req, res, next) => {
         return next(err);
       }
       req.flash("success", { msg: "Success! You are logged in." });
-      res.redirect(req.session.returnTo || "/profile");
+      res.redirect(req.session.returnTo || "/index");
     });
   })(req, res, next);
 };
@@ -57,8 +57,8 @@ exports.logout = (req, res) => {
 };
 
 exports.getSignup = (req, res) => {
-  if (req.user) {
-    return res.redirect("/profile");
+ if (req.user) {
+    return res.redirect("/");
   }
   res.render("signup", {
     title: "Create Account",
@@ -110,9 +110,9 @@ exports.postSignup = (req, res, next) => {
           if (err) {
             return next(err);
           }
-          res.redirect("/profile");
+          res.redirect("index");
         });
       });
     }
   );
-}; */
+}; 
