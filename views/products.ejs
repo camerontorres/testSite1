@@ -2,21 +2,43 @@
 
 <div class="container-fluid headerGap bg-white" style="padding: 0">
 	
-	<div class="row ">
+	<div class="row p-0 m-0 " style="width: 100vw;">
 		
 		<div class="col-md-12" style="padding-left: 3em; padding-right: 3em;">
-			<div class="containerProd bg-white" style="height: auto; padding-top: 2em">
+			<div class="containerProd bg-white d-flex" style="height: auto; padding-top: 2em">
+				<ul class="productPage p-0 m-0" style="flex-grow: 1; flex-basis: 0;">
 
 					<!-----ROW 1-->
-						<a href="/products/productPage">
+
+					<%for(var i=0; i<product.length; i++) {%>
+						<li>
+						  <a href="/products/productPage/<%=product[i]._id%>">
+							<div class="card galleryItem1 galleryCard d-flex">
+								<img src="<%= product[i].image %>" alt="product image" style="width:100%; height: 400px;">
+								<div class="container" style="place-content: end end;">
+								<h4><b><%= product[i].title %></b></h4> 
+								<p> <%=  product[i].price %></p>
+								
+								</div>
+							</div>
+						</a>
+
+						</li>
+					  <%  } %> 
+
+						<li>
+							<a href="/products/productPage">
 							<div class="card galleryItem1 galleryCard d-flex">
 								<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
 								<div class="container" style="place-content: end end;">
 								<h4><b>Black Tee</b></h4> 
-								<p>$20</p> 
+								<p>$20</p>
+								<span> <%= product[0].price %> </span> 
 								</div>
 							</div>
 						</a>
+						</li>
+						<li>
 						<a href="/">
 							<div class="card galleryItem2">
 								<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
@@ -26,72 +48,122 @@
 								</div>
 								</div>
 						</a>
+						</li>
+						<li>
 						<a href="/">
 					<div class="card galleryItem3">
 						<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
 						<div class="container">
-						<h4><b>Chore Coat</b></h4> 
+						<h4><b> placeholder </b></h4> 
 						<p>$120</p> 
 						</div>
 					</div>
 				</a>
+				</li>
+				<li>
 				<a href="/">
 					<div class="card galleryItem4">
 						<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
 						<div class="container">
-						<h4><b>John Doe</b></h4> 
-						<p>Architect & Engineer</p> 
+						<h4><b>placeholder </b></h4> 
+						<p>$30</p> 
 						</div>
 				</div>
 				</a>
+			</li>
 				<!-------ROW 2-->
-				<a href="/">
-						<div class="card galleryItem5">
-							<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
-							<div class="container">
-							<h4><b>John Doe</b></h4> 
-							<p>Architect & Engineer</p> 
-							</div>
+				<li>
+					<a href="/products/productPage">
+					<div class="card galleryItem1 galleryCard d-flex">
+						<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
+						<div class="container" style="place-content: end end;">
+						<h4><b>placeholder </b></h4> 
+						<p>$20</p>
+						<span> <%= product[0].price %> </span> 
+						</div>
 					</div>
 				</a>
+				</li>
+				<li>
 				<a href="/">
-					<div class="card galleryItem6">
+					<div class="card galleryItem2">
 						<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
 						<div class="container">
-						<h4><b>John Doe</b></h4> 
-						<p>Architect & Engineer</p> 
+						<h4><b>placeholder </b></h4> 
+						<p>$60</p> 
 						</div>
-					</div>
-				</a>	
-								
+						</div>
+				</a>
+				</li>
+				<li>
 				<a href="/">
-					<div class="card galleryItem7">
-						<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
-						<div class="container">
-						<h4><b>John Doe</b></h4> 
-						<p>Architect & Engineer</p> 
-						</div>
+			<div class="card galleryItem3">
+				<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
+				<div class="container">
+				<h4><b>placeholder </b></h4> 
+				<p>$120</p> 
 				</div>
-			</a>
-			<a href="/">
-				<div class="card galleryItem8">
-					<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
-					<div class="container">
-					<h4><b>John Doe</b></h4> 
-					<p>Architect & Engineer</p> 
-					</div>
+			</div>
+		</a>
+		</li>
+		<li>
+		<a href="/">
+			<div class="card galleryItem4">
+				<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
+				<div class="container">
+				<h4><b>placeholder </b></h4> 
+				<p>$50</p> 
 				</div>
-			</a>
+		</div>
+		</a>
+	</li>
 			<!-------ROW 3-->
-			<a href="/">
-				<div class="card galleryItem9">
+			<li>
+				<a href="/products/productPage">
+				<div class="card galleryItem1 galleryCard d-flex">
 					<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
-					<div class="container">
-					<h4><b>John Doe</b></h4> 
-					<p>Architect & Engineer</p> 
+					<div class="container" style="place-content: end end;">
+					<h4><b>placeholder </b></h4> 
+					<p>$20</p>
+					<span> <%= product[0].price %> </span> 
 					</div>
 				</div>
 			</a>
+			</li>
+			<li>
+			<a href="/">
+				<div class="card galleryItem2">
+					<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
+					<div class="container">
+					<h4><b>placeholder </b></h4> 
+					<p>$60</p> 
+					</div>
+					</div>
+			</a>
+			</li>
+			<li>
+			<a href="/">
+		<div class="card galleryItem3">
+			<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
+			<div class="container">
+			<h4><b>placeholder </b></h4> 
+			<p>$120</p> 
+			</div>
+		</div>
+	</a>
+	</li>
+	<li>
+	<a href="/">
+		<div class="card galleryItem4">
+			<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
+			<div class="container">
+			<h4><b>placeholder </b></h4> 
+			<p>$1000</p> 
+			</div>
+	</div>
+	</a>
+</li>
+		</ul>
 
 
 				
@@ -100,5 +172,23 @@
 		</div>
 	</div>
 </div>
+
+
+
+			<!--<a href="/post/ **ejsTagHere** posts[i]._id **ejsTaghere*** ">      /post/ Posts[i]-->
+
+					<!-- EXAMPLE LI	<li>
+							<a href="/products/productPage">
+							<div class="card galleryItem1 galleryCard d-flex">
+								<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
+								<div class="container" style="place-content: end end;">
+								<h4><b>Black Tee</b></h4> 
+								<p>$20</p>
+								<span> ****ejs tag here product[0].price ejs tag here** </span> 
+								</div>
+							</div>
+						</a>
+						</li>
+						-->	
 
 <%- include('partials/footer') -%>

@@ -204,3 +204,12 @@ background-position: 0px -680px;
 #NYmap{
   height: 200px;
 }
+
+.productPage{
+  display: inline-block;
+}
+.productPage > li{
+  list-style: none;
+  display: inline-block;
+  width: 24%;
+}
