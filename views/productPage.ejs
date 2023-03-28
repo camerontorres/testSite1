@@ -6,7 +6,7 @@
         <div class="col-md-8 p-5">
             <!-- insert image here-->
             <div class="bg-light" style=" height: 100vh; width: 1fr;">
-              <img src="<%= product.image %>" style="height: 100vh; width: 100%;" >
+              <img src="/public/<%=product.image%>" style="height: 100vh; width: 100%;" >
               
                 
 
@@ -22,16 +22,10 @@
                     <span> <%= product.price %></span>
                     <div class="text-secondary"><!--text box-->
                         <p>
-                            Lorem ipsum dolor sit, 
-                            amet consectetur adipisicing elit. 
-                            Esse atque distinctio 
-                            architecto repellat saepe rerum alias odit eius,
-                            voluptatem doloremque?
-                            Lorem ipsum dolor sit, 
-                            amet consectetur adipisicing elit. 
-                            Esse atque distinctio 
-                            architecto repellat saepe rerum alias odit eius,
-                            voluptatem doloremque?
+                            <%= product.caption %>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Debitis consequuntur recusandae dolore reiciendis 
+                             ducimus doloribus voluptatum, ex molestiae cupiditate illo!
                             <ul>
                                 <li>Lorem ipsum dolor sit amet.</li>
                                 <li>Lorem ipsum.</li>

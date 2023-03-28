@@ -25,9 +25,10 @@ module.exports = {
          if (err) throw err;
         
           const {id} = Products.findById(req.params.id)                
-          .then( result =>{                                            //result is the found document
-            res.send('id:' + req.params.id)
-      res.render("productPage",{product: result})                                             //result will be referenced in EJS as product
+          .then( result =>{        
+            res.render("productPage.ejs",{product: result})                                     //result is the found document
+          //  res.send(':id' + req.params.id)
+                                                  //result will be referenced in EJS as product
         })   
         }) //mongoCL
       
