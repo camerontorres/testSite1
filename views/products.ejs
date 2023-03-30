@@ -1,8 +1,16 @@
 <%- include('partials/header') -%>
 
 <div class="container-fluid headerGap bg-white" style="padding: 0">
+	<div class="row p-0 m-0 bg-light" style="height: 3em">
+		<nav>
+			
+		</nav>
+		
+
+	</div>
 	
 	<div class="row p-0 m-0 " style="width: 100vw;">
+		
 		
 		<div class="col-md-12" style="padding-left: 3em; padding-right: 3em;">
 			<div class="containerProd bg-white d-flex" style="height: auto; padding-top: 2em">
@@ -10,8 +18,8 @@
 
 					<!-----ROW 1-->
 
-					<%for(var i=0; i<product.length; i++) {%>
-						<li>
+					<%for(var i=0; i<product.length; i++) {%>								<!--loops through each item in collection-->
+						<li style="margin-left: .25em; margin-right: .25em;">
 						  <a href="/products/productPage/<%=product[i]._id%>">
 							<div class="card galleryItem1 galleryCard d-flex">
 								<img src="<%= product[i].image %>" alt="product image" style="width:100%; height: 400px;">
@@ -120,7 +128,7 @@
 			<!-------ROW 3-->
 			<li>
 				<a href="/products/productPage">
-				<div class="card galleryItem1 galleryCard d-flex">
+				<div class="card galleryItem1 galleryCard d-flex ">
 					<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
 					<div class="container" style="place-content: end end;">
 					<h4><b>placeholder </b></h4> 
@@ -175,20 +183,6 @@
 
 
 
-			<!--<a href="/post/ **ejsTagHere** posts[i]._id **ejsTaghere*** ">      /post/ Posts[i]-->
-
-					<!-- EXAMPLE LI	<li>
-							<a href="/products/productPage">
-							<div class="card galleryItem1 galleryCard d-flex">
-								<img src="imgs/merch/blacktee.jpg" alt="Avatar" style="width:100%; height: 400px;">
-								<div class="container" style="place-content: end end;">
-								<h4><b>Black Tee</b></h4> 
-								<p>$20</p>
-								<span> ****ejs tag here product[0].price ejs tag here** </span> 
-								</div>
-							</div>
-						</a>
-						</li>
-						-->	
+		
 
 <%- include('partials/footer') -%>

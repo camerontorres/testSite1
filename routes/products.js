@@ -10,7 +10,8 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 router.get("/", productsController.getProducts);
 
 
-router.get("/productPage/:id", ensureAuth, productsController.getProductPage);
+router.get("/productPage/:id", ensureAuth, productsController.getProductPage); 
+router.get("/products/:type", ensureAuth, productsController.getType); 
 
 
 module.exports = router;
