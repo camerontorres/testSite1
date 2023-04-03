@@ -11,7 +11,7 @@ router.get("/", productsController.getProducts);
 
 
 router.get("/productPage/:id", ensureAuth, productsController.getProductPage); 
-router.get("/products/:type", ensureAuth, productsController.getType); 
+router.get("/products/:type", ensureAuth, productsController.getMale); 
 
 
 module.exports = router;
