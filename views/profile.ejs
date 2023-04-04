@@ -5,40 +5,13 @@
           <div class="mt-5 mb-5">
             <div class="mb-3 d-flex flex-column">
              
-            <img class="img img-responsive rounded rounded-circle  border border-warning profPicMain align-self-center" src="/imgs/profilePicture.png"><% //profPic.image%> <!---/imgs/profilePicture.png---> 
             
-            <button type="button" class="profPicUpdateBtn btn btn-primary align-self-center" data-bs-toggle="modal" data-bs-target="#profPicModal">
-              Update Photo
-              
-            </button>
-            <!---MODAL FOR SELECTING A NEW PROFILE PICTURE--->
-            <div class="modal fade" id="profPicModal" tabindex="-1" role="dialog" aria-labelledby="ProfPicModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="ProfPicModalLabel">Select a new profile picture</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form action="/profPic/NewProfPic" method="POST" enctype="multipart/form-data"  >
-                      <label for="imgUpload" class="form-label">Image</label>
-                      <input type="file" class="form-control" id="imageUpload" name="file">
-                      
-                    
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close <span aria-hidden="true">&times;</span> </button>
-                    <button type="submit" class="btn btn-primary" value="Upload">Choose Image</button> 
-                  </div>
-                </form>
-                </div>
-              </div>
-            </div>
 
             <!----------profPic end----------->
             
             
                <div class="align-self-center">
+                <h1>youre logged in</h1>
               <p><strong><%= user.userName %></strong></p>
               <p><strong>Email</strong>: <%= user.email %></p>
               <button type="submit" class="btn btn-primary" value="#" style="width:150px" data-bs-toggle="modal" data-bs-target="#bioModal">update bio</button> 
@@ -74,89 +47,44 @@
 
           
 
-          <!------FORM FOR MAKING A POST----->
-          <div class="mt-5">
-            <button type="button" class="profPicUpdateBtn btn btn-primary" data-bs-toggle="modal" data-bs-target="#createPostModal">
-              Add a post
-              
-            </button>
-
-            <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="createPostModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="createPostModelLabel">Create a new post</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body container">
-
-                    <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-                      <div class="mb-3">
-                          <label for="title" class="form-label">Title</label>
-                          <input type="text" class="form-control" id="title" name="title">
-                      </div>
-                      <div class="mb-3">
-                        <label for="caption" class="form-label">Caption</label>
-                        <textarea class="form-control" id="caption" name="caption"></textarea>
-                      </div>
-                      <div class="mb-3">
-                        <label for="imgUpload" class="form-label">Image</label>
-                        <input type="file" class="form-control" id="imageUpload" name="file">
-                      </div>
-                      <div>
-                        <label for="subject" class="form-label">what did you study?</label>
-                        <input type="text" class="form-control" id="subject" name="subject">
-                      </div>
-                      <div>
-                        <label for="caption" class="form-label">How long did you study?</label>
-                        <div class="container">
-                            <div class="form-row d-flex justify-content-around mb-3">
-                              <div class="">
-                              <input type="text" class="form-control" style="width:100px" id="hours" name="hours" placeholder="hours">
-                            </div>
-                            <div class="">
-                              <input type="text" class="form-control" style="width:100px" id="minutes" name="minutes" placeholder="minutes">
-                            </div>
-                          </div>
-                          </div>
-                    
-                      </div>
-
-                      <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close <span aria-hidden="true">&times;</span> </button>
-                    </form>
-                  </div>
-
-
-
-                  </div>
-                  </div>
-
-
-                 
-                </form>
-                </div>
-              </div>
+          
             </div>
             
                   
           <!------------->
       </div>
-      <div class="col-6">
-        <ul class="row list-unstyled">
-        <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
-          </li>
-        <% } %>
-        </ul>
-        <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/feed">Return to Feed</a>
-        </div>  
-      </div>  
+      
     </div>
   </div>
 </div>
 <%- include('partials/footer') -%>
+
+
+<!---
+<button type="button" class="profPicUpdateBtn btn btn-primary align-self-center" data-bs-toggle="modal" data-bs-target="#profPicModal">
+  Update Photo
+  
+</button>
+***MODAL FOR SELECTING A NEW PROFILE PICTURE****
+<div class="modal fade" id="profPicModal" tabindex="-1" role="dialog" aria-labelledby="ProfPicModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ProfPicModalLabel">Select a new profile picture</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/profPic/NewProfPic" method="POST" enctype="multipart/form-data"  >
+          <label for="imgUpload" class="form-label">Image</label>
+          <input type="file" class="form-control" id="imageUpload" name="file">
+          
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close <span aria-hidden="true">&times;</span> </button>
+        <button type="submit" class="btn btn-primary" value="Upload">Choose Image</button> 
+      </div>
+    </form>
+    </div>
+  </div>
+</div>  --->

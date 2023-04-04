@@ -8,7 +8,7 @@ const infoController = require("../controllers/info");
 const locationsController = require("../controllers/locations");
 const productRoutes = require("../routes/products")
 
-//const { ensureAuth, ensureGuest } = require("../middleware/auth");
+const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Main Routes - simplified for now
 router.get("/", homeController.getIndex);
@@ -19,7 +19,7 @@ router.get("/seoul", locationsController.getSeoul);
 router.use("/products", productRoutes);
 //router.get("/productPage", productsController.getProductPage);
 
-//router.get("/profile", ensureAuth, postsController.getProfile);
+router.get("/profile", ensureAuth, homeController.getProfile);
 //router.get("/feed", postsController.getFeed);
 router.get("/login", authController.getLogin);
 router.post("/login", authController.postLogin);

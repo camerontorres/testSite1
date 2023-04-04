@@ -40,11 +40,14 @@ module.exports = {
 
       getMale: (req, res) => {
         try{
+          
+
+          
           const product = db.collection('products').find().toArray()
           .then(result =>{
-            let params = result.req.params[{ "type": "male"}]
+            let params = result.req.params.type 
            // const {type} = result.find(req.query.type) 
-        res.render("products.ejs", {male: params}) });
+        res.render("products.ejs", {params: params}) });
       }  catch (err) {
         console.log(err);}},
             
