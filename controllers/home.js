@@ -7,10 +7,10 @@ module.exports = {
   getIndex: (req, res) => {
     res.render("index.ejs");
   },
-  getProfile: async (req, res) => {
+ /* getProfile: async (req, res) => {
     try {
 
-    let mongo = MongoClient.connect(DB_STRING, { useUnifiedTopology: true },function (err,client) { //connects to database
+    let mongo = MongoClient.connect({ useUnifiedTopology: true },function (err,client) { //connects to database
       if (err) throw err;
      
        const {profile} = user.findById(req.params.id)                         //finding product by ID
@@ -20,5 +20,6 @@ module.exports = {
                                                                                     
      })   //.then
      })
-}catch (err) {
-  console.log(err);}}};
+} */catch (err) {
+  console.log(err);}}
+//};
