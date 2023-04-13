@@ -2,8 +2,8 @@
 
 
 const { get } = require('jquery');
-const { MongoClient } = require('mongodb');
-//const { db } = require('../models/product');
+const {MongoClient } = require('mongodb');
+const { db } = require('../models/product');
 const Products = require('../models/product')
 
 
@@ -25,7 +25,7 @@ module.exports = {
     getProductPage: async (req, res) => {
       try{
         
-       let mongo = MongoClient.connect(DB_STRING, { useUnifiedTopology: true },function (err,client) { //connects to database
+       let mongo = MongoClient.connect({DB_STRING}, { useUnifiedTopology: true },function (err,client) { //connects to database
          if (err) throw err;
         
           const {id} = Products.findById(req.params.id)                         //finding product by ID
