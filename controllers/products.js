@@ -3,9 +3,12 @@
 
 const { get } = require('jquery');
 const { MongoClient } = require('mongodb');
-const { db } = require('../models/product');
+//const { db } = require('../models/product');
 const Products = require('../models/product')
 
+
+//"mongodb+srv://admin:test123@cluster0.zt4r4al.mongodb.net/test" new string
+//"mongodb+srv://admin:test123@cluster0.zt4r4al.mongodb.net/?retryWrites=true&w=majority" old string
 
 module.exports = {
   
@@ -34,11 +37,11 @@ module.exports = {
         }) //mongoCL
       
      }catch (err) {console.log(err);} //try
-      },  //async
+      }  //async
 
 
 
-      getMale: (req, res) => {
+     /* getMale: (req, res) => {
         try{
           
 
@@ -49,7 +52,7 @@ module.exports = {
            // const {type} = result.find(req.query.type) 
         res.render("products.ejs", {params: params}) });
       }  catch (err) {
-        console.log(err);}},
+        console.log(err);}}, */
             
 
           //var db = client.db('test')          //finds the database
