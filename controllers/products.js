@@ -1,19 +1,20 @@
 
 
 
+//const DB_STRING = require('dotenv')
 const { get } = require('jquery');
-const {MongoClient } = require('mongodb');
+
+//const {MongoClient } = require('mongodb')
 const { db } = require('../models/product');
 const Products = require('../models/product')
 
 
-//"mongodb+srv://admin:test123@cluster0.zt4r4al.mongodb.net/test" new string
-//"mongodb+srv://admin:test123@cluster0.zt4r4al.mongodb.net/?retryWrites=true&w=majority" old string
 
 module.exports = {
   
     getProducts: (req, res) => {
       try{
+        
         const product = db.collection('products').find().toArray()
         .then(result =>{
       res.render("products.ejs", {product: result}) });
@@ -25,19 +26,23 @@ module.exports = {
     getProductPage: async (req, res) => {
       try{
         
-       let mongo = MongoClient.connect({DB_STRING}, { useUnifiedTopology: true },function (err,client) { //connects to database
-         if (err) throw err;
+
         
           const {id} = Products.findById(req.params.id)                         //finding product by ID
           .then( result =>{                                                     //result is the found document
             res.render("productPage.ejs",{product: result})                          //result will be referenced in EJS as product, :id is not required            
           
                                                                                        
-        })   //.then
-        }) //mongoCL
+        })   
+        }catch (err) {
+          console.log(err);}
+      },catch (err) {
+        console.log(err);}
+    }
+        //) //mongoCL
       
-     }catch (err) {console.log(err);} //try
-      }  //async
+     //}catch (err) {console.log(err);} //try
+     // }  //async
 
 
 
@@ -58,4 +63,27 @@ module.exports = {
           //var db = client.db('test')          //finds the database
           //const product = db.collection('products').find()   //finds document AND collection
 
-}//moduleEx
+//}//moduleEx
+
+
+
+
+
+
+
+
+
+/*  ********* THROWN OUT CODE/ ONLY USE FOR REFERENCE *****************
+
+       let mongo = MongoClient.connect(DB_STRING, { useUnifiedTopology: true },function (err,client) { //connects to database
+           if (err) throw err;
+           .then
+
+
+
+
+
+
+
+
+           */
