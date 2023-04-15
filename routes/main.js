@@ -16,6 +16,7 @@ router.get("/info", infoController.getInfo);
 //router.get("/products", productsController.getProducts);
 router.get("/newyork", locationsController.getNewyork);
 router.get("/seoul", locationsController.getSeoul);
+//router.get("/signup", homeController.getSignup);
 router.use("/products", productRoutes);
 //router.get("/productPage", productsController.getProductPage);
 

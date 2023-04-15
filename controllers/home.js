@@ -21,5 +21,17 @@ module.exports = {
      })   //.then
      })
 } */catch (err) {
-  console.log(err);}}
+  console.log(err);},
+
+  /*getSignup: (req, res) => {
+    
+    res.render("signup.ejs", {
+      title: "Create Account",
+    });
+    
+  } */
+
+}
+
+ 
 //};
