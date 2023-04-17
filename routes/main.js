@@ -20,7 +20,7 @@ router.get("/seoul", locationsController.getSeoul);
 router.use("/products", productRoutes);
 //router.get("/productPage", productsController.getProductPage);
 
-//router.get("/profile", ensureAuth, homeController.getProfile);
+router.get("/profile", ensureAuth, authController.getProfile);
 //router.get("/feed", postsController.getFeed);
 router.get("/login", authController.getLogin);
 router.post("/login", authController.postLogin);

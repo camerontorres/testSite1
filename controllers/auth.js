@@ -39,7 +39,7 @@ exports.postLogin = (req, res, next) => {
         return next(err);
       }
       req.flash("success", { msg: "Success! You are logged in." });
-      res.redirect(req.session.returnTo || "/index");
+      res.redirect(req.session.returnTo || "/");
     });
   })(req, res, next);
 };
@@ -57,13 +57,23 @@ exports.logout = (req, res) => {
 };
 
 exports.getSignup = (req, res) => {
- /*if (req.user) {
-    return res.redirect("/");
-  } */
+ if (req.user) {
+    return res.redirect("/profile");
+  } 
   res.render("signup.ejs", {
     title: "Create Account",
   });
 };
+
+exports.getProfile = async (req, res) => {
+  if (req.user) {
+    const profile = User.findById(req.user.id)                         //finding product by ID
+    .then( result =>{                                                     //result is the found document
+      res.render("profile.ejs",{user: result}) 
+    ;
+       
+      } )}}                                 
+     
 
 exports.postSignup = (req, res, next) => {
   const validationErrors = [];
