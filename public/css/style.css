@@ -1,6 +1,24 @@
 *, ::after, ::before {
   box-sizing: border-box;
 }
+#brandName{
+  
+    font-family: 'PT Sans';
+    font-weight: 700;
+    font-size: 1.5em
+  
+}
+.ptSans{
+  font-family: 'PT Sans';
+    font-weight: 400;
+    font-size: 4em;
+}
+.ptSansSmall{
+  font-family: 'PT Sans';
+    font-weight: 400;
+    font-size: 3em;
+}
+
 
 .headerGap{
   margin-top: 56px;
