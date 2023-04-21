@@ -7,6 +7,7 @@ const { get } = require('jquery');
 //const {MongoClient } = require('mongodb')
 const { db } = require('../models/product');
 const Products = require('../models/product')
+const User = require('../models/User')
 
 
 
@@ -37,8 +38,59 @@ module.exports = {
         }catch (err) {
           console.log(err);}
       },catch (err) {
-        console.log(err);}
+        console.log(err);},
+
+
+
+
+
+        addWishlist: async (req, res) => {
+          try {
+            const user = await Users.findOne({
+              email: req.body.email,
+              password: req.body.password
+            })
+            const prodId = req.body
+            await user.findOneAndUpdate(
+              { wishlist: req.params.wishList },
+              {
+                $push: { prodId},
+              }
+            );
+            console.log("added to wishlist");
+            res.redirect(`/prodductPage/${req.params.id}`);
+          } catch (err) {
+            console.log(err);
+          }
+        },
+        deleteWishlist: async (req, res) => {
+          try {
+            // Find post by id
+            let post = await Post.findById({ _id: req.params.id });
+            // Delete image from cloudinary
+            await cloudinary.uploader.destroy(post.cloudinaryId);
+            // Delete post from db
+            await Post.remove({ _id: req.params.id });
+            console.log("Deleted Post");
+            res.redirect("/profile");
+          } catch (err) {
+            res.redirect("/profile");
+          }
+        },
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
         //) //mongoCL
       
      //}catch (err) {console.log(err);} //try

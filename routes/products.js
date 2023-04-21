@@ -8,6 +8,7 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 //Main Routes - simplified for now
 
 router.get("/", productsController.getProducts);
+router.put("/productpage/addWishlist/:id", productsController.addWishlist);
 
 
 router.get("/productPage/:id", ensureAuth, productsController.getProductPage); 
