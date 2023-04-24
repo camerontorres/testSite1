@@ -23,6 +23,45 @@ module.exports = {
       console.log(err);}},
 
 
+      getMan: (req, res) => {
+        try{
+          
+          const product = db.collection('products').find({$or:[ {type: 'male'},{ type: 'unisex'}]}).toArray()
+          .then(result =>{
+        
+        res.render("man.ejs", {product: result})  });
+      }  catch (err) {
+        console.log(err);}},
+
+
+
+        getWoman: (req, res) => {
+          try{
+            
+            const product = db.collection('products').find({$or:[ {type: 'female'},{ type: 'unisex'}]}).toArray()
+            .then(result =>{
+          
+          res.render("woman.ejs", {product: result})  });
+        }  catch (err) {
+          console.log(err);}},
+  
+
+
+
+      getSale: (req, res) => {
+        try{
+          
+          const product = db.collection('products').find({ sale: 'true'}).toArray()
+          
+          .then(result =>{
+           
+              
+            
+        res.render("sale.ejs", {product: result})  });
+      }  catch (err) {
+        console.log(err);}},
+
+
 
     getProductPage: async (req, res) => {
       try{

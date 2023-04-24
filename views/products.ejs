@@ -25,7 +25,12 @@
 								<img src="<%= product[i].image %>" alt="product image" style="width:100%; height: 400px;">
 								<div class="container" style="place-content: end end;">
 								<h4><b><%= product[i].title %></b></h4> 
+								<%if(product[i].sale === 'true'){%>
+								<p class="text-danger"> <%=  product[i].price %>  on sale</p>
+								<% } else{ %> 
 								<p> <%=  product[i].price %></p>
+								<%  } %> 
+								
 								
 								</div>
 							</div>

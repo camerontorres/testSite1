@@ -21,6 +21,11 @@ const productSchema = new mongoose.Schema({
   Type: {
     type: String,
     required: true,
+  },
+  sale: {
+    type:Boolean,
+    
+
   }
 });
 
