@@ -2,26 +2,14 @@
 
 
 
-<!--- <main class="container">
-    <div class="jumbotron">
-        <h1 class="display-4 " style="margin-left:50px">Welcome!</h1>
-        <p class="lead"style="margin-left:50px">Study Buddy allows you to keep track of your learning while staying touch with friends!</p>
-        <hr class="my-4"style="margin-left:50px">
-        <p style="margin-left:50px">It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg margin ml-3"  style="margin-left:100px" href="/info" role="button">Learn more</a>
-      </div>
-    <div class="row justify-content-around mt-5">
-        <a href="/login" class="col-3 btn btn-primary"> Login</a>
-        <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
-    </div>
-</main> -->
+
 
 <div class="container-fluid headerGap">
 	
 	<div class="row"> <!---big carousel-->
-		<div class="col-md-12 p-0">
-			<div class="carousel slide " id="carousel-592952" data-bs-ride="carousel">
-				<ol class="carousel-indicators">
+		<div class="col-md-12 p-0 d-none d-sm-block">
+			<div class="carousel slide "   id= "carousel-592952" data-bs-ride="carousel">
+				<ol class="carousel-indicators slide-hide-on-mobile">
 					<li data-bs-slide-to="0" data-bs-target="#carousel-592952" class="active">
 					</li>
 					<li data-bs-slide-to="1" data-bs-target="#carousel-592952">
@@ -31,7 +19,7 @@
 				</ol>
 				<div class="carousel-inner" style="height: 600px !important;">
 					<div class="carousel-item active" style="height: 550px !important;">
-						<img class="d-block" id="c1" style="height: auto; object-position: 0px -100px; width: 100vw;"  alt="Carousel Bootstrap First" src="/imgs/c1.jpg" />
+						<img class="d-block" id="c1" style="height: 1fr; object-position: 0px -100px; width: 100vw;"  alt="Carousel Bootstrap First" src="/imgs/c1.jpg" />
 						<div class="carousel-caption text-dark" style="text-align: left; padding-left: 4em; ">
 							<h1 class="text-uppercase">
 								Spring/Summer 23
@@ -41,7 +29,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="carousel-item" style="height: 550px !important;">
+					<div class="carousel-item " style="height: 550px !important;">
 						<img class="d-block" id="c2" style="height: 1400px !important; object-position: 0px -650px; width: 100vw;"  alt="Carousel Bootstrap Second" src="/imgs/c2.jpg" />
 						<div class="carousel-caption text-dark" style="text-align: left;">
 							<h1 class="text-uppercase">
@@ -65,14 +53,7 @@
 						</div>
 					</div>
 				</div> 
-				<!--<a class="carousel-control-prev" href="#carousel-592952" data-slide="prev"  onclick="$('#myCarousel').carousel('prev')">
-					<span class="carousel-control-prev-icon"></span> 
-					<span class="sr-only">Previous</span>
-				</a> 
-				<a class="carousel-control-next" href="#carousel-592952" data-slide="next"  onclick="$('#myCarousel').carousel('next')">
-					<span class="carousel-control-next-icon"></span> 
-					<span class="sr-only">Next</span>
-				</a> -->
+				
 
 				<button class="carousel-control-prev" type="button" data-bs-target="#carousel-592952" data-bs-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -88,12 +69,12 @@
 		</div>
 	</div>
 	<div class="row d-flex"> <!--- first row images 4/4/4 -->
-        <div class="col-md-4 firstRowImg" style="padding: 0;" style="padding: 0;">
+        <div class="col-md-4 firstRowImg xs-sizing" style="padding: 0;" style="padding: 0;">
 
-            <img class="behind " src="imgs/man.jpg" style="height: 600px; width: 33.33% " alt="">
+            <img class="behind xs-sizing" src="imgs/man.jpg" style="height: 600px; width: 33.33% " alt="">
 
                     <a class="inFront section1 m-0" style="height: fit-content; width: 100%"href="/products/man">                    
-                        <section class="section1 appear" style="height: 600px; width: 100%"> <!--width 33vw-->
+                        <section class="section1 appear xs" style="height: 600px; width: 100%"> <!--width 33vw-->
                                 <h1 class="text-center text-dark bg-light ptSans" style="width: 100%;"  >MAN</h1>
                         </section>
                     </a>
@@ -101,10 +82,10 @@
 		</div>
         <div class="col-md-4 firstRowImg" style="padding: 0;" style="padding: 0;">
 
-            <img class="behind " src="imgs/woman.jpg" style="height: 600px; width: 33.33% " alt="">
+            <img class="behind xs-sizing" src="imgs/woman.jpg" style="height: 600px; width: 33.33% " alt="">
 
                     <a class="inFront section1 m-0" style="height: fit-content; width: 100%;"href="/products/woman">                    
-                        <section class="section1 appear" style="height: 600px; width: 100%;">
+                        <section class="section1 appear xs" style="height: 600px; width: 100%;">
                                 <h1 class="text-center text-dark bg-light ptSans" style="width: 100%;">WOMAN</h1>
                         </section>
                     </a>
@@ -115,7 +96,7 @@
             <img class="behind " src="imgs/bag2.jpg" style="height: 600px; width: 33.33% " alt="">
 
                     <a class="inFront section1 m-0" style="height: fit-content;width: 100%;"href="/products">                    
-                        <section class="section1 appear" style="height: 600px; width: 100%;">
+                        <section class="section1 appear xs" style="height: 600px; width: 100%;">
                                 <h1 class="text-center text-dark bg-light ptSans"style="width: 100%;"  >ACCESSORIES</h1>
                         </section>
                     </a>
@@ -127,7 +108,7 @@
             <img class="behind w-50" src="imgs/nyc2.jpg" style="height: 600px; " alt="">
 
                     <a class="inFront section1" style="height: fit-content; width: fit-content;"href="/newyork">                    
-                        <section class="section1 appear" style="height: 600px; width: 50vw;">
+                        <section class="section1 appear xs" style="height: 600px; width: 50vw;">
                                 <h1 class="text-center text-dark ptSansSmall " style="margin-bottom: 120px;" >NYC STORE</h1>
                         </section>
                     </a>
@@ -140,7 +121,7 @@
 
                     <a class="inFront section1" style="height: fit-content; width: fit-content;"href="/seoul"> 
                                           
-                        <section class="section1 appear" style="height: 600px; width: 50vw;">
+                        <section class="section1 appear xs" style="height: 600px; width: 50vw;">
                             
                                 <h1 class="  text-center text-white ptSansSmall" style="margin-bottom: 120px;" >SEOUL STORE</h1>
                         </section>
@@ -242,13 +223,13 @@
 		</div>
 	</div>
 	<div class="row"> <!--- csign up form -->
-        <div class="col-md-6" style=" height: 500px; padding: 0px; background-size:cover;">
+        <div class="col-md-6 d-none d-sm-block" style=" height: 500px; padding: 0px; background-size:cover;">
             <img class="behind" src="imgs/signup.jpg" style="height: 500px; width: 50vw;" alt="">
 
             
             <h1 class="text-white inFront"> <!---placeholder text!!!! ---></h1>
         </div>
-		<div class="col-md-6 d-flex flex-column justify-content-center bg-dark" style="background-image: url(/imgs/clouds.jpg); background-size: cover;">
+		<div class="col-md-6 d-flex flex-column justify-content-center bg-dark xs-sizing" style="background-image: url(/imgs/clouds.jpg); background-size: cover;">
 			<form role="form d-flex flex-column">
 				<div class="form-group d-flex flex-column text-center">
 					 
