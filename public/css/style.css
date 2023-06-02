@@ -8,6 +8,10 @@
     font-size: 1.5em
   
 }
+.threeByThree{
+  height: 600px;
+   width: 33.33%
+}
 .ptSans{
   font-family: 'PT Sans';
     font-weight: 400;
@@ -111,10 +115,12 @@ body{
       background-size: cover;
       background-repeat: no-repeat;
     }
+    
 
 .behind{
   z-index: 0;
   position: absolute;
+  
 }
 .inFront{
   z-index: 1;
@@ -156,7 +162,20 @@ body{
  } 
 }
 
+.pageImg{
+  height: 350px; 
+   width:50vw; 
+   padding: 0px;
+   background-size: contain;
 
+
+}
+
+.quarterImg{ 
+  object-fit: cover;
+  width: 100%;
+  
+}
 
 
 .containerProd {
@@ -164,6 +183,12 @@ body{
   grid-template-columns: 1fr 1fr 1fr 1fr; 
   grid-auto-rows: 500px; 
   gap: 20px 20px; 
+  justify-content: center;
+  
+}
+.col-md-12{
+  justify-content: center;
+  display: flex;
 }
 .galleryCard{
   height: 100%;
@@ -236,6 +261,10 @@ background-size: cover;
 background-position: 0px -680px;
 
 }
+#c1{
+  height: 1fr; 
+  object-position: 0px -100px;
+}
 #NYmap{
   height: 200px;
 }
@@ -248,10 +277,56 @@ background-position: 0px -680px;
   display: inline-block;
   width: 24%;
 }
+.quarterCard{
+  flex: 1 0 25%; /* Set the flex properties */
+  margin: 0.25em; 
+
+}
+
 
 @media screen and (max-width: 799px) {
   .xs-sizing{
     height: 100vh;
     width: 100vw;
  } 
+ .navbar{
+  height: 5em;
+  align-items: start;
+ }
+ .navbar-nav{
+  display: flex;
+  justify-items: space-between;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 5em;
+  
+ }
+ .navbar-nav li{
+  padding: 5px;
+  
+ }
+
+ .navbar-brand{
+  align-self: center;
+  padding: 0;
+  
+  margin: 0;
+ }
+ .firstRowImg{
+  width: 100vw;
+ }
+ .behind{
+  width: 100vw;
+ }
+ .quarterimg{
+  display: flex;
+  flex-direction: row;
+
+ }
+ #c1{
+
+height: 100fr;
+object-position:bottom;
+  
+}
 }

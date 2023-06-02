@@ -15,7 +15,7 @@ router.get("/sale", productsController.getSale);
 router.put("/productpage/addWishlist/:id", productsController.addWishlist);
 
 
-router.get("/productPage/:id", ensureAuth, productsController.getProductPage); 
+router.get("/productPage/:id",  productsController.getProductPage); 
 
 //router.get("/products/:type", ensureAuth, productsController.getMale); 
 
